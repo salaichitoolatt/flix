@@ -2,11 +2,11 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 
-if (!process.env.PORT) {
-    throw new Error("Please set the port number");
-}
+// if (!process.env.PORT) {
+//     throw new Error("Please set the port number");
+// }
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT ?? 3000;
 
 app.get("/video", (req, res) => {
   const path = "./videos/sample1.mp4";
